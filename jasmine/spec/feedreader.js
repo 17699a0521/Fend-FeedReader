@@ -39,6 +39,7 @@ $(function() {
          });
          it('name is  defined and not to be empty',function(){
            allFeeds.map((feed)=>{
+               expect(feed.name).toBeDefined();
              expect((feed.name).length).toBeGreaterThan(0);
            });
          });
@@ -118,7 +119,7 @@ describe("Initial Entries",function(){
 
      });
        it("initial entries different from final entries",function(){
-         expect(first).not.toBe(second);
+         expect(first).not.toEqual(second);
 
        });
      });
